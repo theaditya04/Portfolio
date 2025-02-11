@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <nav>
+                <img src ="images/logo.jpg" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>ML Enthusiast</p>
+                <h1>Hi, I'm <span>Aditya Lahiri</span><br> From Kolkata</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.jpg" class ="user">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me </h1>
+                    <p> I am a 2nd year undergraduate student with a growing passion for computer science. 
+                        I have gained a solid foundation in Data Structures and Algorithms (DSA) and Object-Oriented Programming (OOP).
+                        Additionally, I am developing my skills in web development at an amateur level.
+                        I am eager to continue expanding my knowledge and applying what I learn to real-world projects.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>App Development</span><br>Building Andriod/iOS Apps</li>
+                            <li><span>DSA</span><br>Python</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span> June 2023</span><br>Internship At NUS Singapore</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" is="education">
+                        <ul>
+                            <li><span>2024 - present</span><br>2nd Year Undergrad</li>
+                            <li><span>2022 - 2026</span><br>Studying at IEM Kolkata</li>
+                            <li><span>2020 - 2022</span><br>Studying 12th Standard at DPS Durgapur</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ------------------Services-------------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid est, atque corrupti in veniam assumenda 
+                consequatur quibusdam officia unde.Ea cumque qui eligendi nobis unde excepturi fugiat adipisci officia. Aspernatur.</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>Graphic Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid est, atque corrupti in veniam assumenda 
+                consequatur quibusdam officia unde.Ea cumque qui eligendi nobis unde excepturi fugiat adipisci officia. Aspernatur.</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>Image Editing</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid est, atque corrupti in veniam assumenda 
+                consequatur quibusdam officia unde.Ea cumque qui eligendi nobis unde excepturi fugiat adipisci officia. Aspernatur.</p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementsById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<!-- ---------------------Contact----------------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>adityalahiri2@gmail.com</p>
+                <p>7384802613</p>
+                <div class="social-icons">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
